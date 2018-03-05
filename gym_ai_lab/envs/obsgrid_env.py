@@ -1,3 +1,5 @@
+import io
+import sys
 import numpy as np
 from gym import spaces
 from gym.utils import seeding
@@ -83,6 +85,7 @@ class ObsGrid(Env):
     def reset(self):
         self.currstate = self.startstate
         self.done = False
+        return self.currstate
 
     def step(self, action):
         """
@@ -102,7 +105,7 @@ class ObsGrid(Env):
 
     def pos_to_state(self, x, y):
         """
-        Returns the state given its position
+        Returns the state given its position in x and y coordinates
         :param x: x coordinate
         :param y: y coordinate
         :return: state
@@ -111,7 +114,7 @@ class ObsGrid(Env):
 
     def state_to_pos(self, state):
         """
-        Returns the coordinates of a state
+        Returns the coordinates x and y of a state
         :param state: state
         :return: state coordinates (x, y)
         """
@@ -127,4 +130,5 @@ class ObsGrid(Env):
         return self.np_random.choice(self.staterange, p=self.T[state, action])
 
     def render(self, mode='human'):
-        print(self.grid.reshape(self.rows, self.cols))
+        outfile = io.StringIO() if mode == 'ansi' else sys.stdout
+        outfile.write(np.array_str(self.grid.reshape(self.rows, self.cols)))
