@@ -20,7 +20,7 @@ class LavaFloorEnv(ObsGrid):
 
 class VeryBadLavaFloorEnv(ObsGrid):
     """
-    The floor is lava! Actions have a stochastic outcome
+    The floor is lava... but very bad and dangerous lava! Actions have a stochastic outcome
     """
     def __init__(self):
         actions = {0: "L", 1: "R", 2: "U", 3: "D"}
@@ -37,7 +37,7 @@ class VeryBadLavaFloorEnv(ObsGrid):
 
 class NiceLavaFloorEnv(ObsGrid):
     """
-    The floor is lava! Actions have a stochastic outcome
+    The floor is lava but the agent really likes it! Actions have a stochastic outcome
     """
     def __init__(self):
         actions = {0: "L", 1: "R", 2: "U", 3: "D"}
