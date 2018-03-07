@@ -1,5 +1,5 @@
 """
 OpenAI Gym environments designed for the AI lab course
 """
-from gym_ai_lab.envs.smallmaze_env import SmallMazeEnv
-from gym_ai_lab.envs.grdmaze_env import GrdMazeEnv
+from gym_ai_lab.envs.maze_env import SmallMazeEnv, GrdMazeEnv
+from gym_ai_lab.envs.lava_env import LavaFloorEnv, VeryBadLavaFloorEnv, NiceLavaFloorEnv
