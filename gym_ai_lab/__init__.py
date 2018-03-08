@@ -15,3 +15,6 @@ register(
 register(
     id='NiceLavaFloor-v0',
     entry_point='gym_ai_lab.envs:NiceLavaFloorEnv')
+register(
+    id='BiggerLavaFloor-v0',
+    entry_point='gym_ai_lab.envs:BiggerLavaFloorEnv')
