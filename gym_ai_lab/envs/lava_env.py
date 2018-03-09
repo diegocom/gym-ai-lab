@@ -1,4 +1,3 @@
-import numpy as np
 from gym_ai_lab.envs.obsgrid_env import ObsGrid
 
 
