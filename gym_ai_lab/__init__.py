@@ -7,6 +7,10 @@ register(
     id='GrdMaze-v0',
     entry_point='gym_ai_lab.envs:GrdMazeEnv')
 register(
+    id='BlockedMaze-v0',
+    entry_point='gym_ai_lab.envs:BlockedMazeEnv')
+
+register(
     id='LavaFloor-v0',
     entry_point='gym_ai_lab.envs:LavaFloorEnv')
 register(
