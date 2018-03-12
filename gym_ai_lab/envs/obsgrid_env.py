@@ -131,4 +131,4 @@ class ObsGrid(Env):
 
     def render(self, mode='human'):
         outfile = io.StringIO() if mode == 'ansi' else sys.stdout
-        outfile.write(np.array_str(self.grid.reshape(self.rows, self.cols)))
+        outfile.write(np.array_str(self.grid.reshape(self.rows, self.cols)) + "\n")
