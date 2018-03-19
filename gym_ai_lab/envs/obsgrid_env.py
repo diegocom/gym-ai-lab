@@ -129,6 +129,6 @@ class ObsGrid(Env):
         """
         return self.np_random.choice(self.staterange, p=self.T[state, action])
 
-    def render(self, mode='human', close=True):
+    def render(self, mode='human'):
         outfile = io.StringIO() if mode == 'ansi' else sys.stdout
         outfile.write(np.array_str(self.grid.reshape(self.rows, self.cols)) + "\n")
