@@ -63,11 +63,11 @@ class ObsGrid(Env):
                         nx = min(self.rows - 1, x + 1)
                     stp = self.pos_to_state(nx, ny)
                     if self.grid[stp] == "W":  # We are not ghosts
-                        self.T[s, a, s] = actdyn[a][d]
+                        self.T[s, a, s] += actdyn[a][d]
                         self.R[s, a, s] = rewards[self.grid[s]]
                     else:
                         ns = self.pos_to_state(nx, ny)
-                        self.T[s, a, ns] = actdyn[a][d]
+                        self.T[s, a, ns] += actdyn[a][d]
                         self.R[s, a, ns] = rewards[self.grid[ns]]
                 # Normalize probability values over the whole state space
                 self.T[s, a, :] /= np.sum(self.T[s, a, :])
