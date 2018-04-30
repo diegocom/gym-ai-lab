@@ -22,3 +22,6 @@ register(
 register(
     id='BiggerLavaFloor-v0',
     entry_point='gym_ai_lab.envs:BiggerLavaFloorEnv')
+register(
+    id='HugeLavaFloor-v0',
+    entry_point='gym_ai_lab.envs:HugeLavaFloorEnv')
