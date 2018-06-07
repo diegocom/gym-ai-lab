@@ -25,3 +25,10 @@ register(
 register(
     id='HugeLavaFloor-v0',
     entry_point='gym_ai_lab.envs:HugeLavaFloorEnv')
+register(
+    id='LavaFloorExam2018-v0',
+    entry_point='gym_ai_lab.envs:LavaFloorExam2018Env')
+
+register(
+    id='CliffWalkingExam2018-v0',
+    entry_point='gym_ai_lab.envs:CliffWalkingExam2018Env')
