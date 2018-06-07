@@ -10,6 +10,7 @@ class CliffWalkingExam2018Env(CliffWalkingEnv):
         super().__init__()
         self.startstate = np.ravel_multi_index((3, 0), self.shape)
         self.goalstate = np.ravel_multi_index((3, 11), self.shape)
+        self.actions = {0: "U", 1: "R", 2: "D", 3: "L"}
 
     def sample(self, s, a):
         return self.P[s][a][0][1]

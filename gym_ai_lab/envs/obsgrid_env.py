@@ -32,6 +32,7 @@ class ObsGrid(Env):
         # Store info
         self.actions = actions
         self.rows, self.cols = np.shape(grid)
+        self.shape = (self.rows, self.cols)
         self.grid = np.asarray(grid).flatten()
         self.startstate = np.argwhere(self.grid == "S")[0, 0]
         self.goalstate = np.argwhere(self.grid == "G")[0, 0]
